@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.solarmeasure.HomeActivity">
+
+    <me.itangqi.waveloadingview.WaveLoadingView
+        android:id="@+id/waveLoadingView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012"
+        app:wlv_borderColor="#FF9800"
+        app:wlv_borderWidth="3dp"
+        app:wlv_progressValue="40"
+        app:wlv_round_rectangle="true"
+        app:wlv_shapeType="circle"
+        app:wlv_titleCenter="Center Title"
+        app:wlv_titleCenterColor="@android:color/white"
+        app:wlv_titleCenterSize="24sp"
+        app:wlv_titleCenterStrokeColor="#FF9800"
+        app:wlv_titleCenterStrokeWidth="3dp"
+        app:wlv_triangle_direction="north"
+        app:wlv_waveAmplitude="70"
+        app:wlv_waveColor="#FF9800" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waveLoadingView"
+        tools:layout_editor_absoluteX="0dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_charge"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_view1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:lottie_fileName="file_upload.json"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_scale="0.1"
+                    app:lottie_colorFilter="#0F0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Charge Rate"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/tv_charge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100KW"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_discharge"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_view2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:lottie_fileName="file_download.json"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_scale="0.1"
+                    app:lottie_colorFilter="#F00"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discharge Rate"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/tv_discharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100KW"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,17 @@
+Commands
+mysql -u root -p
+
+DATABASE > powerData
+
+CREATE TABLE sensor( id int PRIMARY KEY, uinfo varchar(25), charge float,
+discharge float, reserve float, capacity float, redirected_pwr float );
+
+CREATE USER 'poweruser'@'localhost' IDENTIFIED BY 'powerpass';
+GRANT ALL PRIVILEGES ON powerData.* to 'poweruser'@'localhost';
+
+INSERT INTO sensor VALUES (666, 'satan', 12, 10 ,20000, 20000);
+
+http://localhost/powerGrid/collect.php?id=123&uinfo=harsh&charge=6&discharge=10&reserve=10500&capacity=25000
+
+create table assignid(global_id long);
+INSERT INTO assignid values(1);
